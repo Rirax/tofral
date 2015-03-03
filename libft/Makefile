@@ -6,11 +6,13 @@
 #    By: rlechapt <rlechapt@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/11/11 12:24:25 by rlechapt          #+#    #+#              #
-#    Updated: 2014/11/11 22:40:30 by rlechapt         ###   ########.fr        #
+#    Updated: 2015/03/03 10:59:42 by rlechapt         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ./libft.a
+NAME = libft.a
+
+CC = gcc
 
 SRC = \
 ft_memset.c \
@@ -68,17 +70,19 @@ ft_putstr_fd.c \
 ft_putendl_fd.c \
 ft_putnbr_fd.c
 
-EXT = $(SRC:.c=.o)
+OBJ = $(SRC:%.c=%.o)
 
 all: $(NAME)
 
-$(NAME):
-	gcc -c -Wall -Wextra -Werror $(SRC)
-	ar rc $(NAME) $(EXT)
+$(NAME): $(OBJ)
+	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
 
+%.o: %.c ./includes/libft.h
+	$(CC) -c -Wall -Wextra -Werror $<
+
 clean:
-	rm -f $(EXT)
+	rm -f $(OBJ)
 
 fclean: clean
 	rm -f $(NAME)

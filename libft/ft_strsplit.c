@@ -6,7 +6,7 @@
 /*   By: rlechapt <rlechapt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/11 13:42:37 by rlechapt          #+#    #+#             */
-/*   Updated: 2014/11/30 16:24:33 by rlechapt         ###   ########.fr       */
+/*   Updated: 2015/03/02 18:24:56 by rlechapt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,6 @@ char		**ft_strsplit(char const *s, char c)
 		i += ft_word_size(s, c, i);
 		j++;
 	}
-	tab[j] = '\0';
+	tab[j] = NULL;
 	return (tab);
 }

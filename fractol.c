@@ -6,7 +6,7 @@
 /*   By: rlechapt <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/01/07 18:35:56 by rlechapt          #+#    #+#             */
-/*   Updated: 2015/01/13 19:37:28 by rlechapt         ###   ########.fr       */
+/*   Updated: 2015/03/03 11:02:13 by rlechapt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@ void	mdlb_init(void)
 
 	e.flag = 1;
 	e.zoom = 0.5;
-	e.moveX = 0;
-	e.moveY = 0;
-	e.WIDTH = 600;
-	e.HEIGHT = 600;
-	e.iteration_max = 100;
+	e.movex = 0;
+	e.movey = 0;
+	e.width = 600;
+	e.height = 600;
+	e.iter_max = 100;
 	mlx_settings(&e);
 }
 
@@ -32,11 +32,11 @@ void	jlia_init(void)
 
 	e.flag = 2;
 	e.zoom = 0.5;
-	e.moveX = 0;
-	e.moveY = 0;
-	e.WIDTH = 600;
-	e.HEIGHT = 600;
-	e.iteration_max = 150;
+	e.movex = 0;
+	e.movey = 0;
+	e.width = 600;
+	e.height = 600;
+	e.iter_max = 150;
 	mlx_settings(&e);
 }
 
@@ -46,11 +46,11 @@ void	bdha_init(void)
 
 	e.flag = 3;
 	e.zoom = 0.5;
-	e.moveX = 0;
-	e.moveY = 0;
-	e.WIDTH = 600;
-	e.HEIGHT = 600;
-	e.iteration_max = 100;
+	e.movex = 0;
+	e.movey = 0;
+	e.width = 600;
+	e.height = 600;
+	e.iter_max = 100;
 	mlx_settings(&e);
 }
 
@@ -65,7 +65,6 @@ int		print_param(void)
 
 int		main(int argc, char **argv)
 {
-	int		flag;
 	char	*mdlb;
 	char	*jlia;
 	char	*mdlr;

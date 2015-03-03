@@ -6,11 +6,11 @@
 /*   By: rlechapt <rlechapt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/05 10:21:56 by rlechapt          #+#    #+#             */
-/*   Updated: 2014/11/11 21:48:24 by rlechapt         ###   ########.fr       */
+/*   Updated: 2015/03/03 11:00:06 by rlechapt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "./includes/libft.h"
 
 int	ft_isascii(int c)
 {
